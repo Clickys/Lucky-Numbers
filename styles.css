@@ -9,17 +9,18 @@
     display: -webkit-flex;
     display: flex;
 
-    -webkit-flex-flow: row wrap;
+    -webkit-flex-flow: row nowrap;
     justify-content: space-around;
 }
 
 .luckyNumber {
-    background: tomato;
+    background: #4068E0;
     padding: 5px;
     width: 200px;
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
 
     line-height: 150px;
     color: white;
@@ -28,10 +29,10 @@
     text-align: center;
 }
 
-div > p {
+h1 {
     text-align: center;
-    font-size: 55px;
-    text-shadow: 2px 2px orange;
+    color: yellowgreen;
+    font-weight: 800;
 }
 
 
@@ -44,7 +45,7 @@ div > p {
 
 .playerLuckyNumber > div {
 
-    background: tomato;
+    background: #008080;
     padding: 5px;
     width: 200px;
     height: 150px;
@@ -52,5 +53,75 @@ div > p {
     margin-top: 150px;
     align-self: center;
     margin: auto;
+
+}
+body {
+    background-color: black;
+}
+
+#buttonParent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+#spinButton {
+    color: red;
+    align-self: flex-end;
+ 	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+#spinButton:hover {
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+#spinButton {
+    	position:relative;
+	top:1px;
+}
+
+#playerNumber {
+     color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+#LuckyNumberMessage {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#congrantsMessagePosition {
+    color: red;
+    align-self: center;
+}
+
 
 }

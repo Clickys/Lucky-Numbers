@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div>
-        <p>Lucky Numbers</p>
+    <div >
+        <h1>Lucky Numbers</h1>
     </div>
     <ul class="luckyNumbersPosition">
         <li class="luckyNumber"></li>
@@ -22,8 +22,14 @@
     </ul>
     <div class="playerLuckyNumber">
         <div>
-          <p>Test</p>  
+          <p id="playerNumber"></p>  
         </div>
+    </div>
+    <div id="buttonParent">
+        <button id="spinButton" onClick="handler.spinButton()">Spin !!</button>
+    </div>
+    <div id="luckyNumberMessage">
+        <p id="congrantsMessagePosition"></p>
     </div>
     <script src="script.js"></script>
 </body>
