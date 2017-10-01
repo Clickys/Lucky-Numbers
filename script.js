@@ -1,10 +1,14 @@
 //Create an object that will organize informations about the lucky numbers
 let luckyNumbers = {
     numbers: [],
+
     playerLuckyNumber: 0,
+
     winner: false,
-    congrantsMessage: 'YOU ARE THE WINNER !!!!',
-    tryAgainMessage: 'Try Again',
+
+    congrantsMessage: 'YOU WIN !!!!',
+
+    tryAgainMessage: '',
 
     randomNumbers: function () {
         for (let i = 0; i < 5; i++) {
@@ -25,15 +29,18 @@ let luckyNumbers = {
                 this.winner = true;
             }
         })
-        luckyNumbers.numbers = [];
-    }
+
+                luckyNumbers.numbers = [];
+    },
+
+
 
 };
+
 
 let handler = {
 
     spinButton: function () {
-        debugger;
         view.clearLuckyNumberMessage();
         view.displayPlayerNumber();
         view.displayLuckyNumbers();
@@ -70,13 +77,36 @@ let view = {
         if (luckyNumbers.winner) {
             congrantsMessagePosition.textContent = luckyNumbers.congrantsMessage;
 
+        } else {
+            congrantsMessagePosition.textContent = luckyNumbers.tryAgainMessage;
         }
+
+    },
+
+    displayNumbersHistoryLog: function () {
+        luckyNumbers.numbersLog();
+        let displayNumbersPosition = document.getElementById('displayNumbersPosition');
+        let ulPosition = document.getElementById('ulPosition');
+
+
+        luckyNumbers.numbersHistoryLog.forEach(function (number) {
+            let createLiElement = document.createElement('li');
+            createLiElement.textContent = number;
+            ulPosition.appendChild(createLiElement);
+
+        });
+
 
     },
 
     clearLuckyNumberMessage: function () {
         let congrantsMessagePosition = document.getElementById('congrantsMessagePosition');
-       console.log(congrantsMessagePosition);
-        congrantsMessagePosition.innerHTML = luckyNumbers.tryAgainMessage;
+      
+        luckyNumbers.winner = false;
+        luckyNumbers.numbers = [];
+        
+        congrantsMessagePosition.textContent = '';
+
+
     }
 }
